@@ -1,0 +1,12 @@
+[package]
+name = "lotofacil_ai"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tch = "0.5.0"
+rand = "0.8"
+numpy = "0.21.0"
+ndarray = "0.15"
+ndarray-rand = "^0.14"
+csv = "1.1"
