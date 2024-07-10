@@ -58,17 +58,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Extrair a última previsão (última linha do tensor de previsões)
     let last_prediction = predictions.get(predictions.size()[0] - 1);
 
-    // Converter a previsão para um vetor de f32
-    let f32_vec: Vec<f32> = Vec::<f32>::from(last_prediction);
-    
-    // Inicializar um vetor para armazenar os resultados
-    let mut result: Vec<i32> = Vec::new();
-    
-    // Iterar sobre os elementos do vetor, arredondar e converter para i32
-    for value in f32_vec {
-        result.push(value.round() as i32);
-    }
-
+    // Converter a previsão para um vetor de f32 e exibir
+    let result: Vec<f32> = last_prediction.into();
     println!("Previsão dos próximos 15 números: {:?}", result);
 
     Ok(())
